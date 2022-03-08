@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <title>Tac-Tic</title>
+</head>
+
+<header class="container-fluid d-flex head_cont">
+    <div class="heading">
+        <div id="main">
+            <button class="openbtn" onclick="openNav()">☰</button>
+        </div>
+        <ul class="d-flex ul_flex">
+            <li class=" active_head">Teams</li>
+            <li class="mx-2">U23</li>
+            <li class="mx-2">U19</li>
+        </ul>
+    </div>
+    <div class="img d-flex">
+        <img src="./images/ben-parker-OhKElOkQ3RE-unsplash (1).jpg" alt="">
+
+        <h6 class="mx-3">Marcus</h6>
+    </div>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="#">Dashboard</a>
+        <a href="#">Tactics Vault</a>
+        <a href="#">Teams</a>
+        <a href="#">Schedule Generator</a>
+        <a href="#">Weekly Traning Plans</a>
+        <a href="#">Team Metrics</a>
+        <a href="#">Customizations</a>
+    </div>
+</header>
+
+<body>
+    <div class="root">
+
+
+        <!-- Button trigger modal -->
+        <div class="container button mt-5 mb-5">
+            <button type="button" class="btn new mt-3" data-toggle="modal" data-target="#exampleModalCenter">Add New
+                Schedule</button>
+        </div>
+        <div class="container traning_Schedule">
+            <div class="container-fluid ">
+                <div class="container d-flex main_cont mt-4">
+                    <div class="training mt-3">
+                        <h4> Winter Traning Schedule </h4>
+                        <small class="small">4 Weeks | 12 Sessions</small>
+                    </div>
+
+                    <div class="icons">
+                        <img class="mx-2" src="./images/pencil.png" alt="" width="30">
+                        <img class="mx-2" src="./images/bin.png" alt="" width="30">
+                        <img id="flip1" class="mx-2 " src="./images/down-chevron.png" alt="" width="30">
+                    </div>
+                </div>
+                <hr>
+            </div>
+
+            <div id="panel1" class="mt-3 mb-4">
+                <div class="container date_cont">
+                    <div class="row">
+                        <div class="col-lg-10 d-flex">
+                            <div class="dates col-lg-3">
+                                <small class="small">START DATE</small>
+                                <h5>25 Janauary 2020</h5>
+                            </div>
+                            <div class="days col-lg-3">
+                                <small class="small">END DATE</small>
+                                <h5>19 February 2020</h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="button ">
+                                <button class="btn update">Update</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="d-flex date_days">
+                        <span id="boxID" class="week mx-2 mt-2 mb-3">
+                            <input type="checkbox" class="checkbox-round" value="1">
+                            <label for="sunday">Sunday</label>
+                        </span>
+                        <span class="week mx-2 mt-2 mb-3" value="1">
+                            <input type="checkbox" class="checkbox-round">
+                            <label for="sunday">Monday</label>
+                        </span>
+                        <span class="week mx-2 mt-2 mb-3" value="1">
+                            <input type="checkbox" class="checkbox-round">
+                            <label for="sunday">Tuesday</label>
+                        </span>
+                        <span class="week mx-2 mt-2 mb-3" value="1">
+                            <input type="checkbox" class="checkbox-round">
+                            <label for="sunday">Wednesday</label>
+                        </span>
+                        <span class="week mx-2 mt-2 mb-3" value="1">
+                            <input type="checkbox" class="checkbox-round">
+                            <label for="sunday">Thursday</label>
+                        </span>
+                        <span class="week mx-2 mt-2 mb-3" value="1">
+                            <input type="checkbox" class="checkbox-round">
+                            <label for="sunday">Friday</label>
+                        </span>
+                        <span class="week mx-2 mt-2 mb-3" value="1">
+                            <input type="checkbox" class="checkbox-round">
+                            <label for="sunday">Sataurday</label>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container traning_Schedule">
+            <div class="container ">
+                <div class="container d-flex main_cont mt-4">
+                    <div class="training mt-3">
+                        <h4> Winter Traning Schedule </h4>
+                        <small class="small">4 Weeks | 12 Sessions</small>
+                    </div>
+
+                    <div class="icons">
+                        <img class="mx-2" src="./images/pencil.png" alt="" width="30">
+                        <img class="mx-2" src="./images/bin.png" alt="" width="30">
+                        <img id="flip2" class="mx-2 " src="./images/down-chevron.png" alt="" width="30">
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div id="panel2" class="mt-3">
+                <div class="container date_cont">
+                    <div class="row">
+                        <div class="col-lg-10 d-flex">
+                            <div class="dates col-lg-3">
+                                <small class="small">START DATE</small>
+                                <h5>25 Janauary 2020</h5>
+                            </div>
+                            <div class="days col-lg-3">
+                                <small class="small">END DATE</small>
+                                <h5>19 February 2020</h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="button ">
+                                <button class="btn update">Update</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container ">
+                    <div class="d-flex date_days">
+                        <span id="boxID" class="week mx-2 mt-2 mb-3">
+                            <input type="checkbox" class="checkbox-round" value="1">
+                            <label for="sunday">Sunday</label>
+                        </span>
+                        <span class="week mx-2 mt-2 mb-3" value="1">
+                            <input type="checkbox" class="checkbox-round">
+                            <label for="sunday">Monday</label>
+                        </span>
+                        <span class="week mx-2 mt-2 mb-3" value="1">
+                            <input type="checkbox" class="checkbox-round">
+                            <label for="sunday">Tuesday</label>
+                        </span>
+                        <span class="week mx-2 mt-2 mb-3" value="1">
+                            <input type="checkbox" class="checkbox-round">
+                            <label for="sunday">Wednesday</label>
+                        </span>
+                        <span class="week mx-2 mt-2 mb-3" value="1">
+                            <input type="checkbox" class="checkbox-round">
+                            <label for="sunday">Thursday</label>
+                        </span>
+                        <span class="week mx-2 mt-2 mb-3" value="1">
+                            <input type="checkbox" class="checkbox-round">
+                            <label for="sunday">Friday</label>
+                        </span>
+                        <span class="week mx-2 mt-2 mb-3" value="1">
+                            <input type="checkbox" class="checkbox-round">
+                            <label for="sunday">Sataurday</label>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container traning_Schedule">
+            <div class="container">
+                <div class="container d-flex main_cont mt-4">
+                    <div class="training mt-3">
+                        <h4> Winter Traning Schedule </h4>
+                        <small class="small">4 Weeks | 12 Sessions</small>
+                    </div>
+
+                    <div class="icons">
+                        <img class="mx-2" src="./images/pencil.png" alt="" width="30">
+                        <img class="mx-2" src="./images/bin.png" alt="" width="30">
+                        <img id="flip3" class="mx-2 " src="./images/down-chevron.png" alt="" width="30">
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div id="panel3" class="mt-3">
+                <div class="container date_cont">
+                    <div class="row">
+                        <div class="col-lg-10 d-flex">
+                            <div class="dates col-lg-3">
+                                <small class="small">START DATE</small>
+                                <h5>25 Janauary 2020</h5>
+                            </div>
+                            <div class="days col-lg-3">
+                                <small class="small">END DATE</small>
+                                <h5>19 February 2020</h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="button ">
+                                <button class="btn update">Update</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container ">
+                    <div class="d-flex date_days">
+                        <span id="boxID" class="week mx-2 mt-2 mb-3">
+                            <input type="checkbox" class="checkbox-round" value="1">
+                            <label for="sunday">Sunday</label>
+                        </span>
+                        <span class="week mx-2 mt-2 mb-3" value="1">
+                            <input type="checkbox" class="checkbox-round">
+                            <label for="sunday">Monday</label>
+                        </span>
+                        <span class="week mx-2 mt-2 mb-3" value="1">
+                            <input type="checkbox" class="checkbox-round">
+                            <label for="sunday">Tuesday</label>
+                        </span>
+                        <span class="week mx-2 mt-2 mb-3" value="1">
+                            <input type="checkbox" class="checkbox-round">
+                            <label for="sunday">Wednesday</label>
+                        </span>
+                        <span class="week mx-2 mt-2 mb-3" value="1">
+                            <input type="checkbox" class="checkbox-round">
+                            <label for="sunday">Thursday</label>
+                        </span>
+                        <span class="week mx-2 mt-2 mb-3" value="1">
+                            <input type="checkbox" class="checkbox-round">
+                            <label for="sunday">Friday</label>
+                        </span>
+                        <span class="week mx-2 mt-2 mb-3" value="1">
+                            <input type="checkbox" class="checkbox-round">
+                            <label for="sunday">Sataurday</label>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container traning_Schedule">
+            <div class="container">
+                <div class="container d-flex main_cont mt-4">
+                    <div class="training mt-3">
+                        <h4> Winter Traning Schedule </h4>
+                        <small class="small">4 Weeks | 12 Sessions</small>
+                    </div>
+
+                    <div class="icons">
+                        <img class="mx-2" src="./images/pencil.png" alt="" width="30">
+                        <img class="mx-2" src="./images/bin.png" alt="" width="30">
+                        <img id="flip4" class="mx-2 " src="./images/down-chevron.png" alt="" width="30">
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div id="panel4" class="mt-3 mb-4">
+                <div class="container date_cont">
+                    <div class="row">
+                        <div class="col-lg-10 d-flex">
+                            <div class="dates col-lg-3">
+                                <small class="small">START DATE</small>
+                                <h5>25 Janauary 2020</h5>
+                            </div>
+                            <div class="days col-lg-3">
+                                <small class="small">END DATE</small>
+                                <h5>19 February 2020</h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="button ">
+                                <button class="btn update">Update</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container ">
+                    <div class="d-flex date_days">
+                        <span id="boxID" class="week mx-2 mt-2 mb-3">
+                            <input type="checkbox" class="checkbox-round" value="1">
+                            <label for="sunday">Sunday</label>
+                        </span>
+                        <span class="week mx-2 mt-2 mb-3" value="1">
+                            <input type="checkbox" class="checkbox-round">
+                            <label for="sunday">Monday</label>
+                        </span>
+                        <span class="week mx-2 mt-2 mb-3" value="1">
+                            <input type="checkbox" class="checkbox-round">
+                            <label for="sunday">Tuesday</label>
+                        </span>
+                        <span class="week mx-2 mt-2 mb-3" value="1">
+                            <input type="checkbox" class="checkbox-round">
+                            <label for="sunday">Wednesday</label>
+                        </span>
+                        <span class="week mx-2 mt-2 mb-3" value="1">
+                            <input type="checkbox" class="checkbox-round">
+                            <label for="sunday">Thursday</label>
+                        </span>
+                        <span class="week mx-2 mt-2 mb-3" value="1">
+                            <input type="checkbox" class="checkbox-round">
+                            <label for="sunday">Friday</label>
+                        </span>
+                        <span class="week mx-2 mt-2 mb-3" value="1">
+                            <input type="checkbox" class="checkbox-round">
+                            <label for="sunday">Sataurday</label>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h5 class="modal-title text-center" id="exampleModalLongTitle">Create New Schedule</h5>
+                    </div>
+                    <div class="modal-body">
+                        <form action="">
+                            <div class="form-group">
+                                <label for="email1">Schedule Name</label>
+                                <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter name">
+
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-lg-6">
+                                    <label for="datefrom">Start Date</label>
+                                    <input type="text" id="datepicker">
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    <label for="dateto">End Date</label>
+                                    <input type="text" id="datepicker1">
+                                </div>
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <label for="date pick">Enter No. of weeks</label>
+                                <input type="text">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn save">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="index.js"></script>
+
+</html>
